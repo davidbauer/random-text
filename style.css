@@ -1,4 +1,8 @@
-body {font-family: Georgia, serif; font-size: 16px;width: 600px; margin: 20px auto;padding:10px;}
+body {font-family: Georgia, serif; font-size: 16px; max-width: 990px; margin: 20px auto;padding:10px;}
+
+#left {width:45%;float:left;margin-right: 30px; margin-bottom: 100px;}
+
+#right {width:45%;float: left;}
 
 #user {
 	font-size: 30px;
@@ -36,7 +40,8 @@ body {font-family: Georgia, serif; font-size: 16px;width: 600px; margin: 20px au
 #zeedl {
 	min-height: 200px;
 	background-color: green;
-	padding: 10px 10px 40px 10px;
+	padding: 10px 0px 40px 0px;
+	width: 100%;
 }
 #bangg {
 	font-family:Impact;
@@ -47,4 +52,4 @@ body {font-family: Georgia, serif; font-size: 16px;width: 600px; margin: 20px au
 
 #wrapper {width:100%;}
 
-#todo {margin-top: 200px;color:grey;border-top:1px dotted grey;padding-top: 20px;}
+#todo {margin-top: 200px;color:grey;border-top:1px dotted grey;padding-top: 20px;clear: both;}
