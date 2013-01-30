@@ -1,8 +1,8 @@
 <?php
 require 'vendor/autoload.php';
 use RedBean_Facade as R;
-R::setup('mysql:host=localhost;dbname=banggomat',
-            'root','root'); //mysql
+// R::setup('mysql:host=localhost;dbname=banggomat', 'root','root'); //mysql
+R::setup('mysql:host=localhost;dbname=tageswoc_banggomat', 'tageswoc_banggom','QUDooee-'); //mysql
 
 $app = new \Slim\Slim(array(
     'mode' => 'development'
@@ -11,9 +11,14 @@ $app = new \Slim\Slim(array(
 $tambur = new TamburClient("a1892d4076a7421aa9e1ac6b2fb5dd68", "banggomat-14", "DQIsFQAk");
 $csv_link = "https://docs.google.com/spreadsheet/pub?key=0AhM9lBUdMo93dEpzanh0anc5VlU5REVFZlZBMnJHYnc&single=true&gid=0&output=csv";
 
+$app->get('/bangg_reset', function() {
+    R::wipe("bangg");
+    R::wipe("csvdata");
+});
+
 $app->get('/bangg', function() use ($app) {
     $all = R::findAll('bangg',
-        ' LIMIT 10 ');
+        ' ORDER BY id DESC LIMIT 10 ');
     $banggs = array();
     foreach ($all as $bangg) {
         array_push($banggs, array(
