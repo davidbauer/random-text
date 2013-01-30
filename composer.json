@@ -1,0 +1,8 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "tambur/tambur": "dev-master",
+        "gabordemooij/redbean": "dev-master",
+        "nategood/httpful": "dev-master"
+    }
+}
