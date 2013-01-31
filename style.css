@@ -1,13 +1,13 @@
-body {font-family: Impact, sans-serif; font-size: 16px; max-width: 990px; margin: 20px auto;padding:10px;}
+body {font-family: Impact, sans-serif; font-size: 16px; max-width: 980px; margin: 20px auto;padding:10px;}
 
-#left {width:45%;float:left;margin-right: 50px; margin-bottom: 100px;}
+#left {width:45%;float:left;margin-right: 50px;}
 
 #right {width:45%;float: left;}
 
 #user {
 	font-size: 30px;
 	display: inline-block;
-
+	width:300px;
 }
 
 #button {
@@ -20,14 +20,12 @@ body {font-family: Impact, sans-serif; font-size: 16px; max-width: 990px; margin
 	border-radius:6px;
 	border:1px solid #d133ed;
 	display:inline-block;
-
 	font-family:Impact;
 	font-size:20px;
 	font-weight:bold;
 	padding:8px;
 	text-decoration:none;
-	text-shadow: none;
-	
+	text-shadow: none;	
 	width: 100px; 
 }
 #button:hover {
@@ -84,3 +82,93 @@ a.otherbangg:hover:after {
 #wrapper {width:100%;}
 
 #todo {margin-top: 200px;color:grey;border-top:1px dotted grey;padding-top: 20px;clear: both;}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+#user {width:280px;}
+
+#button {width: 280px;}
+#left, #right {
+	width: 280px;
+	clear:both;
+	margin:0;
+}
+
+#zeedl {width:280px;margin: 0;}
+.otherbangg {width:120px;float:left;}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+#user {width:280px;float:left; margin-right: 10px;}
+
+#button {width: 120px;}
+#left, #right {
+	width: 440px;;
+}
+
+#zeedl {width:440px;margin: 0;}
+.otherbangg {width:120px;float:left;}
+}
+
+/* Big Smartphones (portrait) ----------- */
+@media only screen 
+and (min-width : 321px) and (max-width:400px) and (orientation:portrait) {
+/* Styles */
+#user {width:340px;float:left;}
+
+#button {width: 340px;}
+#left, #right {
+	width: 340px;
+	clear:both;
+	margin:0;
+}
+
+#zeedl {width:340px;margin: 0;}
+.otherbangg {width:140px;float:left;}
+
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
