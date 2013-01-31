@@ -1,4 +1,4 @@
-body {font-family: Georgia, serif; font-size: 16px; max-width: 990px; margin: 20px auto;padding:10px;}
+body {font-family: Impact, sans-serif; font-size: 16px; max-width: 990px; margin: 20px auto;padding:10px;}
 
 #left {width:45%;float:left;margin-right: 30px; margin-bottom: 100px;}
 
@@ -49,6 +49,37 @@ body {font-family: Georgia, serif; font-size: 16px; max-width: 990px; margin: 20
 	font-weight:bold;
 	text-align: center;
 }
+
+.otherbangg {
+	background: grey;
+	margin: 0 5px 5px 0;
+	padding:5px;
+	width: 40%;
+	min-height: 30px;
+	float:left;
+	text-align: center;
+	font-size: 22px;
+
+	
+}
+
+.otherbangg a {
+	text-decoration: none !important;
+	color: black;
+
+}
+
+.otherbangg a:hover {
+	opacity: 0.5;
+}
+
+
+.yellow {background: yellow;}
+.blue {background: blue;}
+.red {background: red;}
+.pink {background: pink;}
+.green {background: green;}
+
 
 #wrapper {width:100%;}
 

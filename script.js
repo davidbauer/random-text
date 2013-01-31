@@ -5,7 +5,7 @@ $(function() {
 
 	if (hash) {
 		hash = hash.substring(1);
-        $.getJSON(api_url + "/" + hash + "?callback=?", function(bangg){
+        $.get(api_url + "/" + hash, function(bangg){
             showBangg(bangg);
         });
 	}
@@ -18,12 +18,16 @@ $(function() {
 		banggIt(myUser);
 	});
 
-    $.getJSON(api_url + "?callback=?", function(banggs){
+    $.get(api_url, function(banggs){
         // get list of Schnitzelbänggs
         var newest = $("#newest_banggs");
         for (var i=0; i<banggs.length; i++) {
+            var colors = ["yellow", "green", "blue", "pink", "red"];
+            var otherbangg = $('<div class="otherbangg"/>');
             var bangg = banggs[i];
-            newest.append("<a href='#"+bangg.id+"' data-bangg-id='"+bangg.id+"' data-bangg-person='"+ bangg.person +"' data-bangg-text='" + bangg.text + "'>" + bangg.person + "</a><br />");
+            newest.append(otherbangg);
+            otherbangg.append("<a href='#"+bangg.id+"' data-bangg-id='"+bangg.id+"' data-bangg-person='"+ bangg.person +"' data-bangg-text='" + bangg.text + "'>" + bangg.person + "</a>");
+            otherbangg.addClass(colors[Math.floor(Math.random()*colors.length)]);
         }
 
     });
