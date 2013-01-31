@@ -1,6 +1,6 @@
 body {font-family: Impact, sans-serif; font-size: 16px; max-width: 990px; margin: 20px auto;padding:10px;}
 
-#left {width:45%;float:left;margin-right: 30px; margin-bottom: 100px;}
+#left {width:45%;float:left;margin-right: 50px; margin-bottom: 100px;}
 
 #right {width:45%;float: left;}
 
@@ -20,14 +20,15 @@ body {font-family: Impact, sans-serif; font-size: 16px; max-width: 990px; margin
 	border-radius:6px;
 	border:1px solid #d133ed;
 	display:inline-block;
-	color:#ffffff;
+
 	font-family:Impact;
 	font-size:20px;
 	font-weight:bold;
 	padding:8px;
 	text-decoration:none;
-	text-shadow:1px 0px 0px #b115cd;
-	width: 80px; 
+	text-shadow: none;
+	
+	width: 100px; 
 }
 #button:hover {
 	background-color:#b51ed0;
@@ -59,27 +60,26 @@ body {font-family: Impact, sans-serif; font-size: 16px; max-width: 990px; margin
 	float:left;
 	text-align: center;
 	font-size: 22px;
-
+	text-decoration: none !important;
+	color: black;
 	
 }
 
-.otherbangg a {
-	text-decoration: none !important;
-	color: black;
-
+a.otherbangg:hover:before {
+	content: "< ";
 }
 
-.otherbangg a:hover {
-	opacity: 0.5;
+a.otherbangg:hover:after {
+	content: " >";
 }
 
-
-.yellow {background: yellow;}
-.blue {background: blue;}
-.red {background: red;}
-.pink {background: pink;}
-.green {background: green;}
-
+.yellow {background: rgba(255,255,0,0.7);}
+.blue {background: rgba(0,0,255,0.7);}
+.red {background: rgba(255,0,0,0.7);}
+.pink {background: rgba(255,191,202,0.7);}
+.green {background: rgba(0,128,0,0.7);}
+.fuchsia {background: rgba(255,0,255,0.7);}
+.aqua {background: rgba(0,255,255,0.7);}
 
 #wrapper {width:100%;}
 
