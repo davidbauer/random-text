@@ -5,7 +5,7 @@ $(function() {
 
 	if (hash) {
 		hash = hash.substring(1);
-        $.get(api_url + "/" + hash, function(bangg){
+        $.getJSON(api_url + "/" + hash + "?callback=?", function(bangg){
             showBangg(bangg);
         });
 	}
@@ -18,7 +18,7 @@ $(function() {
 		banggIt(myUser);
 	});
 
-    $.get(api_url, function(banggs){
+    $.getJSON(api_url + "?callback=?", function(banggs){
         // get list of Schnitzelbänggs
         var newest = $("#newest_banggs");
         for (var i=0; i<banggs.length; i++) {
