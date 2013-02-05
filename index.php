@@ -141,7 +141,7 @@ function poetize($csv_link, $person) {
     $gap4 = $gaps["4"][$gap4k];
     $gap5 = $gaps["5"][$gap5k];
     
-    $ret = 'ey, ' . $person . ', mach mal vorwaerts mit dem text!! <br /> ' . $gap1 . ' du ' . $gap2 . ' alter ' . $gap3 . ' mach die ' . $gap4 . ' ' . $gap5;
+    $ret = 'ey, ' . $person . ', mach mal vorw&auml;rts mit dem text!! <br /> ' . $gap1 . ' du ' . $gap2 . ' alter ' . $gap3 . ' mach die ' . $gap4 . ' ' . $gap5;
     return $ret;
 }
 
