@@ -1,6 +1,15 @@
-body {font-family: Impact, sans-serif; font-size: 16px; max-width: 980px; margin: 20px auto;padding:10px;}
+html { 
+	background: url(higru.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {font-family: Impact, sans-serif; font-size: 16px; max-width: 980px; margin: 20px auto;padding:10px;background: rgb(255,255,255);background: rgba(255,255,255,0.6);}
 
 #left {width:45%;float:left;margin-right: 50px;}
+#credit {font-family: Arial, sans-serif; font-size: 8px;color:#cacaca;margin-top: 20px;clear: both;}
 
 #right {width:45%;float: left;}
 
@@ -38,15 +47,16 @@ body {font-family: Impact, sans-serif; font-size: 16px; max-width: 980px; margin
 
 #zeedl {
 	min-height: 200px;
-	background-color: green;
-	padding: 10px 0px 40px 0px;
+	padding: 10px 5px 40px 5px;
 	width: 100%;
-}
-#bangg {
-	font-family:Impact;
 	font-size:30px;
 	font-weight:bold;
 	text-align: center;
+}
+#share {
+	margin-top: 30px;
+	font-weight: normal;
+	
 }
 
 .otherbangg {
@@ -71,24 +81,40 @@ a.otherbangg:hover:after {
 	content: " >";
 }
 
-.yellow {background: rgba(255,255,0,0.7);}
-.blue {background: rgba(0,0,255,0.7);}
-.red {background: rgba(255,0,0,0.7);}
-.pink {background: rgba(255,191,202,0.7);}
-.green {background: rgba(0,128,0,0.7);}
-.fuchsia {background: rgba(255,0,255,0.7);}
-.aqua {background: rgba(0,255,255,0.7);}
+.grey {background: rgb(224,224,224);background: rgba(224,224,224,0.7);}
+.yellow {background: rgb(255,255,0);background: rgba(255,255,0,0.7);}
+.blue {background: rgb(0,0,255);background: rgba(0,0,255,0.7);}
+.red {background: rgb(255,0,0);background: rgba(255,0,0,0.7);}
+.pink {background: rgb(255,191,202);background: rgba(255,191,202,0.7);}
+.green {background: rgb(0,128,0);background: rgba(0,128,0,0.7);}
+.fuchsia {background: rgb(255,0,255);background: rgba(255,0,255,0.7);}
+.aqua {background: rgb(0,255,255);background: rgba(0,255,255,0.7);}
 
 #wrapper {width:100%;}
-
-#todo {margin-top: 200px;color:grey;border-top:1px dotted grey;padding-top: 20px;clear: both;}
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
 /* Styles */
+
+body {font-size:20px;}
+
+#user {width:70%;float:left;}
+
+#button {width: 30%;float: left;margin-bottom: 20px;}
+#left, #right {
+	width: 100%;
+	clear:both;
+	margin:0;
 }
+
+#zeedl {clear: both;}
+
+.otherbangg {width:50%;float:left;font-size: 16px;padding-top:15px;}
+.mobile-hide {display:none;}
+}
+
 
 /* Smartphones (portrait) ----------- */
 @media only screen 
@@ -104,11 +130,12 @@ and (max-width : 320px) {
 
 #zeedl {width:280px;margin: 0;}
 .otherbangg {width:120px;float:left;}
+.mobile-hide {display:none;}
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen 
-and (min-width : 321px) {
+and (min-width : 321px) and (max-width: 568px) {
 /* Styles */
 #user {width:280px;float:left; margin-right: 10px;}
 
@@ -119,6 +146,7 @@ and (min-width : 321px) {
 
 #zeedl {width:440px;margin: 0;}
 .otherbangg {width:120px;float:left;}
+.mobile-hide {display:none;}
 }
 
 /* Big Smartphones (portrait) ----------- */
@@ -136,6 +164,7 @@ and (min-width : 321px) and (max-width:400px) and (orientation:portrait) {
 
 #zeedl {width:340px;margin: 0;}
 .otherbangg {width:140px;float:left;}
+.mobile-hide {display:none;}
 
 }
 

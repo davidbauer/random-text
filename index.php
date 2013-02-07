@@ -18,7 +18,7 @@ $app->get('/bangg_reset', function() {
 
 $app->get('/bangg', function() use ($app) {
     $all = R::findAll('bangg',
-        ' ORDER BY id DESC LIMIT 14 ');
+        ' ORDER BY id DESC LIMIT 26 ');
     $banggs = array();
     foreach ($all as $bangg) {
         array_push($banggs, array(
@@ -141,7 +141,7 @@ function poetize($csv_link, $person) {
     $gap4 = $gaps["4"][$gap4k];
     $gap5 = $gaps["5"][$gap5k];
     
-    $ret = 'ey, ' . $person . ', mach mal vorw&auml;rts mit dem text!! <br /> ' . $gap1 . ' du ' . $gap2 . ' alter ' . $gap3 . ' mach die ' . $gap4 . ' ' . $gap5;
+    $ret = 'D<span style="color:grey;">r</span> ' . $person . ' sait ' . $gap1 . ' ' . $gap2 . ' vo dr W&auml;lt<br />' . $gap3 . '<br/><br />' . $gap4 . ' isch zerscht bitz d&ouml;sig,<br/> sait none: I han e L&ouml;sig!<br /><br />Hejo, ' . $gap5 . '<br />' . 'G&auml;nd d<span style="color:grey;">r</span> ' . $person . ' doch de Schwobe!';
     return $ret;
 }
 

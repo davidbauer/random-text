@@ -1,0 +1,14 @@
+{
+    "name": "tambur/tambur",
+    "type": "library",
+    "description": "Tambur.io Publisher Library",
+    "keywords": ["tambur", "realtime", "websocket", "http"],
+    "homepage": "http://github.com/tamburio/php-tambur",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "classmap": ["tambur.php"]
+    }
+}
