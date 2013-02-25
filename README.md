@@ -7,6 +7,7 @@ Think: "David is a fairly average programmer."
 - "David" entered via input field
 - "average" randomly picked from an array of adjectives 
 - "programmer" randomly picked from an array of nouns
+- Any number of text elements can be inserted randomly
 
 Open index.php and...
 - enter the specs of your MySql database
