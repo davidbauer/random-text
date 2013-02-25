@@ -5,53 +5,26 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 <script src="tabletop/src/tabletop.js"></script>
-<title>Banggomat</title>
-<meta name="description" content="Schnitzelbängg per Knopfdruck selber machen. Mit über 100'000 Variationen." />
-<meta name="author" content="David Bauer" />
-<meta name="keywords" content="TagesWoche, Fasnacht, Basel, Schnitzelbangg, Bangg" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Der Banggomat der TagesWoche"/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="img.png"/>
-<meta property="og:description" content="Schnitzelbängg per Knopfdruck selber machen. Mit über 100'000 Variationen."/>
-<!-- 
-Concept, design, programming: David Bauer / TagesWoche
-Programming: Andre Graf / Erl.io
- -->
- 
-  <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22593782-4']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
- 
- 
+<title>Random-Text</title>
 </head>
 <body>
+
 <div id="wrapper">
 
 	<div id="left">
 
-		<h2>Mach e Bangg!</h2>
+		<h2>Create your text</h2>
 
 		<div>
 			<form id="searchform" name="banggomat">
-				<input type="text" id="user" name="namme" autofocus="autofocus" placeholder="gib e name i..." required>
-				<input type="submit" value="Ze-wai" id="button">
+				<input type="text" id="user" name="namme" autofocus="autofocus" placeholder="enter text" required>
+				<input type="submit" value="Submit" id="button">
 			</form>
 		</div>
 
 		<div id="zeedl" class="grey">
 
-			<div id="bangg">Vo wäm soll di Bangg handle? Gib dr name oben i...</div>
+			<div id="bangg"></i> Please enter some text above</div>
 			<div id="share"></div>
 		</div>
 		
@@ -59,13 +32,13 @@ Programming: Andre Graf / Erl.io
 
 	<div id="right">
 
-			<h2>D'Bängg vo de andere</h2>
+			<h2>Previous texts generated</h2>
             <div id="newest_banggs"></div>
 
-            <div id="credit">Von <a href="http://www.tageswoche.ch/user/profile/David%20Bauer">David Bauer/TagesWoche</a> und <a href="http://erl.io/">Andre Graf/Erl.io</a></div>
+            <div id="credit">Von <a href="http://www.twitter.com/davidbauer">David Bauer/TagesWoche</a> und <a href="http://erl.io/">Andre Graf/Erl.io</a></div>
 
 	</div> <!-- right -->
-
+	
 </div> <!-- wrapper -->
 
 

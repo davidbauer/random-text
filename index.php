@@ -2,19 +2,22 @@
 require 'vendor/autoload.php';
 use RedBean_Facade as R;
 // R::setup('mysql:host=localhost;dbname=banggomat', 'root','root'); //mysql
-R::setup('mysql:host=localhost;dbname=tageswoc_banggomat', 'tageswoc_banggom','QUDooee-'); //mysql
+R::setup('mysql:host=localhost;dbname=<<ENTERDATABASENAME>>', '<<USERNAME>>','<PASSWORD>>'); //mysql
 
 $app = new \Slim\Slim(array(
     'mode' => 'development'
 ));
 
 $tambur = new TamburClient("a1892d4076a7421aa9e1ac6b2fb5dd68", "banggomat-14", "DQIsFQAk");
-$csv_link = "https://docs.google.com/spreadsheet/pub?key=0AhM9lBUdMo93dEpzanh0anc5VlU5REVFZlZBMnJHYnc&single=true&gid=0&output=csv";
+$csv_link = "<<URL OF GOOGLE SPREADSHEET to import TEXT ELEMETS FROM>>";
 
+/*
 $app->get('/bangg_reset', function() {
     R::wipe("bangg");
     R::wipe("csvdata");
 });
+*/
+
 
 $app->get('/bangg', function() use ($app) {
     $all = R::findAll('bangg',
@@ -141,7 +144,7 @@ function poetize($csv_link, $person) {
     $gap4 = $gaps["4"][$gap4k];
     $gap5 = $gaps["5"][$gap5k];
     
-    $ret = 'D<span style="color:grey;">r</span> ' . $person . ' sait ' . $gap1 . ' ' . $gap2 . ' vo dr W&auml;lt<br />' . $gap3 . '<br/><br />' . $gap4 . ' isch zerscht bitz d&ouml;sig,<br/> sait none: I han e L&ouml;sig!<br /><br />Hejo, ' . $gap5 . '<br />' . 'G&auml;nd d<span style="color:grey;">r</span> ' . $person . ' doch de Schwobe!';
+    $ret = 'D<span style="color:grey;">r</span> ' . $person . ' sait ' . $gap1 . ' ' . $gap2 . ' vo dr W&auml;lt<br />' . $gap3 . '<br/><br />' . $gap4 . ' isch zerscht bitz d&ouml;syg,<br/> sait noochhär: Ych han e L&ouml;syg!<br /><br />Hejo, ' . $gap5 . '<br />' . 'G&auml;nd d<span style="color:grey;">r</span> ' . $person . ' doch de Schwobe!';
     return $ret;
 }
 

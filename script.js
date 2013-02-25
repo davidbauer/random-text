@@ -1,7 +1,7 @@
 $(function() {
 	var hash = window.location.hash,
 	    field = document.banggomat.namme,
-        api_url = "http://3tageswoche.ch/apps/banggomat/bangg";
+        api_url = "/bangg";
 
 	if (hash) {
 		hash = hash.substring(1);
@@ -21,7 +21,7 @@ $(function() {
 	var colors = ["yellow", "green", "blue", "pink", "red", "aqua", "fuchsia"];
 
     $.get(api_url, function(banggs){
-        // get list of Schnitzelbänggs
+        // get list of texts
         var newest = $("#newest_banggs");
         for (var i=0; i<banggs.length; i++) {
             var otherbangg = $('<a class="otherbangg"/>');
@@ -47,11 +47,10 @@ $(function() {
     function showBangg(bangg) {
     	
         window.location.hash = bangg.id;
-        document.banggomat.user.value = bangg.person;
-        var fbShare = "Uff Feyssbugg daile: <iframe src='//www.facebook.com/plugins/like.php?href=" + window.location + "&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;font=arial&amp;colorscheme=light&amp;action=like&amp;height=25&amp;appId=204329636307540' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:100px; height:25px;' allowTransparency='true'></iframe> ";
-        var twShare = "Uff Dwiddr daile: <a href='https://twitter.com/share' class='twitter-share-button' data-text='Habe mit dem Banggomat der @tageswoche zur #fasnachtBS einen Schnitzelbangg kreiert: '>Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script>";
-        var mailShare = "Schigg en per <a href='mailto:?Subject=Mii Bangg&BODY=Ich ha bi dr DaagesWuche e Bangg geschriibe. Lueg en aa und mach au eine: " + window.location + "'>Mail</a>";
-        var share = fbShare + "<br/>" + twShare + "<br/>" + mailShare;
+        document.banggomat.user.value = bangg.person;     
+        var twShare = "Share on Twitter <a href='https://twitter.com/share' class='twitter-share-button'>Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script>";
+        var mailShare = "Share via <a href='mailto:?Subject=<<YOURSUBJECT>>&BODY=<<YOURTEXT>>" + window.location + "'>e-mail</a>";
+        var share = twShare + "<br/>" + mailShare;
          
         
         $('#zeedl').fadeOut(600, function() {
@@ -61,10 +60,6 @@ $(function() {
             $("#bangg").html(bangg.text).fadeIn();
             $('#share').html(share).fadeIn();
         });
-        	
-        // $('#bangg').html(share). fadeOut(function() {
-            
-        // });
     }
 
     function banggIt(myUser) {

@@ -6,7 +6,7 @@ html {
 	background-size: cover;
 }
 
-body {font-family: Impact, sans-serif; font-size: 16px; max-width: 980px; margin: 20px auto;padding:10px;background: rgb(255,255,255);background: rgba(255,255,255,0.6);}
+body {font-family: Impact, Arial, sans-serif; font-size: 16px; max-width: 980px; height: 800px; margin: 20px auto;padding:10px;background: rgb(255,255,255);background: rgba(255,255,255,0.6);}
 
 #left {width:45%;float:left;margin-right: 50px;}
 #credit {font-family: Arial, sans-serif; font-size: 8px;color:#cacaca;margin-top: 20px;clear: both;}
@@ -36,6 +36,7 @@ body {font-family: Impact, sans-serif; font-size: 16px; max-width: 980px; margin
 	text-decoration:none;
 	text-shadow: none;	
 	width: 100px; 
+
 }
 #button:hover {
 	background-color:#b51ed0;
@@ -90,7 +91,10 @@ a.otherbangg:hover:after {
 .fuchsia {background: rgb(255,0,255);background: rgba(255,0,255,0.7);}
 .aqua {background: rgb(0,255,255);background: rgba(0,255,255,0.7);}
 
+#selfpromo {margin:10px 0;}
+
 #wrapper {width:100%;}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen 
