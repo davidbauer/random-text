@@ -144,7 +144,7 @@ function poetize($csv_link, $person) {
     $gap4 = $gaps["4"][$gap4k];
     $gap5 = $gaps["5"][$gap5k];
     
-    $ret = 'D<span style="color:grey;">r</span> ' . $person . ' sait ' . $gap1 . ' ' . $gap2 . ' vo dr W&auml;lt<br />' . $gap3 . '<br/><br />' . $gap4 . ' isch zerscht bitz d&ouml;syg,<br/> sait noochhär: Ych han e L&ouml;syg!<br /><br />Hejo, ' . $gap5 . '<br />' . 'G&auml;nd d<span style="color:grey;">r</span> ' . $person . ' doch de Schwobe!';
+    $ret = 'Enter some base text here ' . $person . ' and here ' . $gap1 . ' ' . $gap2 . ' and here ' . $gap3 . '<br/><br />' . $gap4 . ' and here ' . $gap5;
     return $ret;
 }
 

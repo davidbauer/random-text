@@ -18,7 +18,7 @@ $(function() {
 		banggIt(myUser);
 	});
 	
-	var colors = ["yellow", "green", "blue", "pink", "red", "aqua", "fuchsia"];
+	var colors = ["yellow", "green", "blue", "pink", "red", "aqua", "fuchsia"]; // to apply some color magic later
 
     $.get(api_url, function(banggs){
         // get list of texts
